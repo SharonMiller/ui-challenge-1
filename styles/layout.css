@@ -2,7 +2,7 @@
   max-width:480px;
   display:grid;
   grid-template-columns: repeat(2, 1fr); 
-  grid-auto-rows: 25px; 
+  grid-template-rows: repeat(39, 25px) 80px; 
   margin: auto;
 }
 .container > div{
@@ -11,8 +11,6 @@
   text-align: center;
 }
 
-/* .container > div:nth-child(odd){
-  background:#ddd; */
 div {
   border: 10px, solid, black;
 }
@@ -79,15 +77,16 @@ div {
   grid-column-start: 1; 
   grid-column-end: 3; 
   grid-row-start: 40; 
-  grid-row-end: 43;
+  grid-row-end: 41;
 }
 
 @media screen and (min-width: 768px){
   .container{
     max-width:960px;
     display:grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: minmax(min-content, 200px) repeat(4, 1fr);
     grid-auto-rows: 50px; 
+    grid-template-rows: auto; 
     margin: auto;
   }
   #boxa {
@@ -145,6 +144,7 @@ div {
     grid-row-end: 12;
   }
   #boxi{
+    grid-auto-rows: 800px;
     grid-column-start: 2; 
     grid-column-end: 6; 
     grid-row-start: 12; 
